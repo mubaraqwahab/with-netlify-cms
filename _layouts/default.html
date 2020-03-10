@@ -7,9 +7,22 @@
     <link rel="stylesheet" href="/assets/css/style.css">
     {% feed_meta %}
     {% seo title=false %}
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
   </head>
   <body>
     {% include navigation.html %}
     {{ content }}
+
+    <script>
+      if (window.netlifyIdentity) {
+        window.netlifyIdentity.on("init", function(user) {
+          if (!user) {
+            window.netlifyIdentity.on("login", function() {
+              document.location.href = "/admin/";
+            });
+          }
+        });
+      }
+    </script>
   </body>
 </html>
