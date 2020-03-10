@@ -24,3 +24,7 @@ plugins:
   - jekyll-seo-tag
 
 permalink: pretty
+
+compress_html:
+  clippings: all
+  comments: all
