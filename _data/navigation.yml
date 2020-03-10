@@ -3,7 +3,7 @@ items:
     link: /
   - name: About
     link: /about/
-  - name: Staff
-    link: /staff/
   - name: Blog
     link: /blog/
+  - name: Authors
+    link: /staff/
