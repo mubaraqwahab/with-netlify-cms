@@ -11,9 +11,28 @@ collections:
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     # editor:
-      # preview: false # To hide preview pane
+    # preview: false # To hide preview pane
     fields:
       - { label: "Layout", name: "layout", widget: "hidden", default: "post" }
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "date" }
+      - {
+          label: "Author",
+          name: "author",
+          widget: "relation",
+          collection: "authors",
+          displayFields: ["name"],
+          searchFields: ["display_name"],
+          valueField: "name",
+        }
+      - { label: "Body", name: "body", widget: "markdown" }
+  - name: "authors"
+    label: "Authors"
+    folder: "_authors/"
+    create: true
+    fields:
+      - { label: "Layout", name: "layout", widget: "hidden", default: "author" }
+      - { label: "Short Name", name: "name", widget: "string" }
+      - { label: "Display Name", name: "display_name", widget: "string" }
+      - { label: "Position", name: "position", widget: "string" }
       - { label: "Body", name: "body", widget: "markdown" }
