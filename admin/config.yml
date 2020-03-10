@@ -26,6 +26,7 @@ collections:
           valueField: "name",
         }
       - { label: "Body", name: "body", widget: "markdown" }
+
   - name: "authors"
     label: "Authors"
     folder: "_authors/"
@@ -36,3 +37,14 @@ collections:
       - { label: "Display Name", name: "display_name", widget: "string" }
       - { label: "Position", name: "position", widget: "string" }
       - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "pages"
+    label: "Pages"
+    files:
+      - label: "About Page"
+        name: "about"
+        file: "about.md"
+        fields:
+          - { label: "Title", name: "title", widget: "hidden", default: "About" }
+          - { label: "Layout", name: "layout", widget: "hidden", default: "about" }
+          - { label: "Body", name: "body", widget: "markdown" }
