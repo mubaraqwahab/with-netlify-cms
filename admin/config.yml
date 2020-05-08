@@ -11,7 +11,7 @@ collections:
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     editor:
-      preview: false # To hide preview pane
+      preview: true # To hide preview pane
     fields:
       - { label: "Layout", name: "layout", widget: "hidden", default: "post" }
       - { label: "Title", name: "title", widget: "string" }
@@ -32,7 +32,7 @@ collections:
     folder: "_authors/"
     create: true
     editor:
-      preview: false # To hide preview pane
+      preview: true # To hide preview pane
     fields:
       - { label: "Layout", name: "layout", widget: "hidden", default: "author" }
       - { label: "Short Name", name: "name", widget: "string" }
@@ -43,7 +43,7 @@ collections:
   - name: "pages"
     label: "Pages"
     editor:
-      preview: false # To hide preview pane
+      preview: true # To hide preview pane
     files:
       - label: "About Page"
         name: "about"
@@ -56,7 +56,7 @@ collections:
   - name: "config"
     label: "Config"
     editor:
-      preview: false
+      preview: true
     files:
       - label: "Navigation"
         name: "navigation"
